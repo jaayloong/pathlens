@@ -1,0 +1,13 @@
+model: yolo26n.pt
+confidence_threshold: 0.25
+tracker: bytetrack.yaml
+priority:
+  semantic_risk: 0.30
+  distance: 0.25
+  path: 0.25
+  motion: 0.15
+  confidence: 0.05
+guidance:
+  min_score: 0.55
+  cooldown_frames: 45
+  max_alerts_per_frame: 2
