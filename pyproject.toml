@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pathlens-cv"
+version = "0.1.0"
+description = "Context-aware computer-vision prioritization for accessibility guidance research."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Jay Piratla"}]
+dependencies = []
+
+[project.optional-dependencies]
+demo = [
+  "opencv-python>=4.9",
+  "ultralytics>=8.3",
+]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+
+[tool.setuptools.packages.find]
+include = ["pathlens*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
